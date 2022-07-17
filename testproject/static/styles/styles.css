@@ -1,0 +1,99 @@
+@import "normalize8.0.1.min.css";
+
+*{padding:0;margin:0;border:0;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+ul li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    color: #fff;
+}
+main{
+    background-color: #3e3e3e; 
+    min-height: 100vh;
+    padding-bottom: 20px;
+}
+.container{
+    margin: 0 auto;
+    max-width: 800px;
+    padding-top: 30px;
+}
+.title{
+    font-weight: 200;
+    font-size: 36px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+.label{
+    font-weight: 200;
+    padding: 15px 0 5px 0;
+    color: #fff !important;
+    list-style:none !important;
+}
+#list{
+    padding-left: 13px;
+}
+#list > li:not(:last-child){
+    margin-bottom: 13px;
+}
+#data-list{
+    margin-left: 45px;
+    margin-top: 10px;
+    opacity: 0;
+    transition: 0.15s all ease;
+}
+#data-list.shown{
+    opacity: 1;
+}
+.data-list__min{
+    color: rgb(126, 251, 104);
+}
+.data-list__max{
+    color: rgb(255, 120, 47);
+}
+#data-sublist > li{
+    color: rgb(112, 180, 253);
+    list-style:decimal;
+}
+.checkbox{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 10%;
+    cursor: pointer;
+    margin-right: 8px;
+}
+.checkbox.active{
+    position: relative;
+}
+.checkbox::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    top: 75%;
+    height: 25%;
+    border-radius: 2px;
+    background-color: #fff;
+    transform: translateX(8px) rotate(-45deg);
+    transform-origin: left bottom;
+    z-index: +1;
+    display: none;
+ }
+.checkbox::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 10px;
+    width: 25%;
+    border-radius: 2px;
+    background-color: #fff;
+    transform: translateX(8px) rotate(-45deg);
+    transform-origin: left bottom;
+    display: none;
+}
+.checkbox.active::after, .checkbox.active::before{
+    display: block;
+}
